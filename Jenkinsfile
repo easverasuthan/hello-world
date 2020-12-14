@@ -15,7 +15,6 @@ pipeline {
          stage ('Deploying our Api'){
             steps{
              checkout scm
-                        sh '/home/ec2-user/bin/kubectl get pods'
             }
 
          }
