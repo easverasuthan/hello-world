@@ -16,9 +16,9 @@ pipeline {
             steps{
              checkout scm
              sh 'docker build -t hello-world .'
-             sh 'docker tag hello-world 122974644486.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest'
+             sh 'docker tag hello-world 603389930669.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest'
              sh '$(aws ecr get-login --no-include-email --region us-east-1)'
-             sh 'docker push 122974644486.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest'
+             sh 'docker push 603389930669.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest'
             }
 
          }
